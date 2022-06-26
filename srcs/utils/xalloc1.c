@@ -6,7 +6,7 @@
 /*   By: ynakashi <ynakashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 03:37:49 by kahirose          #+#    #+#             */
-/*   Updated: 2022/06/12 13:01:11 by ynakashi         ###   ########.fr       */
+/*   Updated: 2022/06/26 10:02:33 by ynakashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*x_malloc(size_t size)
 	ptr = malloc(size);
 	if (!ptr)
 	{
-		perror("minishell");
+		perror("my_shell");
 		exit(1);
 	}
 	return (ptr);
@@ -32,7 +32,7 @@ void	*ft_x_calloc(size_t count, size_t size)
 	ptr = ft_calloc(count, size);
 	if (!ptr)
 	{
-		perror("minishell");
+		perror("my_shell");
 		exit(1);
 	}
 	return (ptr);
@@ -45,7 +45,7 @@ t_list	*ft_x_lstnew(void *content)
 	new_element = ft_lstnew(content);
 	if (!new_element)
 	{
-		perror("minishell");
+		perror("my_shell");
 		exit(1);
 	}
 	return (new_element);
@@ -58,21 +58,8 @@ char	*ft_x_itoa(int n)
 	ptr = ft_itoa(n);
 	if (!ptr)
 	{
-		perror("minishell");
+		perror("my_shell");
 		exit(1);
 	}
 	return (ptr);
 }
-//ft_calloc
-//ft_split
-//ft_strjoin
-//ft_lst系
-//int	main(void)
-//{
-	//char	*str1 = "aaebbelle";
-	//char	**result;
-
-	//result = ft_x_split(str1, 'e');
-	//printf("%s\n", result[2]);
-	//return (0);
-//}

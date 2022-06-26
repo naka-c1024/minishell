@@ -6,7 +6,7 @@
 /*   By: ynakashi <ynakashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 05:12:54 by kahirose          #+#    #+#             */
-/*   Updated: 2022/06/20 08:45:01 by ynakashi         ###   ########.fr       */
+/*   Updated: 2022/06/26 10:09:14 by ynakashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static size_t	envlist_len(t_envlist *envlist)
 	return (len);
 }
 
+// bash立ち上げた後にこの関数に入ると39行目でOLDPWDの時にft_x_strjoinの第二引数にNULLが入ってしまいundefinedError
 char	**create_env_arr(t_envlist *envlist)
 {
 	char	**env_arr;

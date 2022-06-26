@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   xalloc2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kahirose <kahirose@studnt.42tokyo.jp>      +#+  +:+       +#+        */
+/*   By: ynakashi <ynakashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 04:07:12 by kahirose          #+#    #+#             */
-/*   Updated: 2022/06/15 07:58:42 by kahirose         ###   ########.fr       */
+/*   Updated: 2022/06/26 09:59:52 by ynakashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	**ft_x_split(const char *s, char c)
 	result = ft_split(s, c);
 	if (!result)
 	{
-		perror("minishell");
+		perror("my_shell");
 		exit(1);
 	}
 	return (result);
@@ -32,7 +32,7 @@ char	*ft_x_strjoin(const char *s1, const char *s2)
 	result = ft_strjoin(s1, s2);
 	if (!result)
 	{
-		perror("minishell");
+		perror("my_shell");
 		exit(1);
 	}
 	return (result);
@@ -45,7 +45,7 @@ void	*ft_x_strdup(const char *s1)
 	result = ft_strdup(s1);
 	if (!result)
 	{
-		perror("minishell");
+		perror("my_shell");
 		exit(1);
 	}
 	return (result);
@@ -58,7 +58,7 @@ char	*ft_x_substr(const char *s, unsigned int start, size_t len)
 	result = ft_substr(s, start, len);
 	if (!result)
 	{
-		perror("minishell");
+		perror("my_shell");
 		exit(1);
 	}
 	return (result);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ipc_executor.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kahirose <kahirose@studnt.42tokyo.jp>      +#+  +:+       +#+        */
+/*   By: ynakashi <ynakashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 13:37:29 by kahirose          #+#    #+#             */
-/*   Updated: 2022/06/19 12:09:26 by kahirose         ###   ########.fr       */
+/*   Updated: 2022/06/26 09:58:23 by ynakashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	case_of_command_not_found(char *cmd_name)
 	size_t	len;
 
 	len = ft_strlen(cmd_name);
-	safe_func(write(2, "minishell: ", 11));
+	safe_func(write(2, "my_shell: ", 11));
 	safe_func(write(2, cmd_name, len));
 	safe_func(write (2, ": command not found\n", 20));
 	return (127);

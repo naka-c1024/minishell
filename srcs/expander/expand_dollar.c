@@ -6,7 +6,7 @@
 /*   By: ynakashi <ynakashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 08:18:30 by ynakashi          #+#    #+#             */
-/*   Updated: 2022/06/19 22:01:33 by ynakashi         ###   ########.fr       */
+/*   Updated: 2022/06/26 09:53:31 by ynakashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,13 @@ static size_t	loc_meta_char(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == '\'')
+		if (' ' <= str[i] && str[i] <= '/')
 			return (i);
-		if (str[i] == '\"')
+		else if (':' <= str[i] && str[i] <= '@')
 			return (i);
-		if (str[i] == '\n')
+		else if ('[' <= str[i] && str[i] <= '^')
 			return (i);
-		if (str[i] == '$')
-			return (i);
-		if (str[i] == ' ')
+		else if ('{' <= str[i] && str[i] <= '~')
 			return (i);
 		i++;
 	}
